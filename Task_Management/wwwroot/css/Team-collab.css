@@ -1,0 +1,75 @@
+/* team-collab.css */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff;
+    color: #333;
+    text-align: center;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+}
+
+header {
+    background-color: #4e73df;
+    color: #fff;
+    padding: 30px 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.form-section {
+    margin-bottom: 30px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+input[type="text"] {
+    padding: 12px;
+    width: 80%;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+button {
+    padding: 12px 25px;
+    background-color: #4caf50;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+    button:hover {
+        background-color: #45a049;
+    }
+
+.task-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.task-item {
+    background-color: #e0f7fa;
+    border-left: 6px solid #00796b;
+    padding: 15px;
+    border-radius: 6px;
+    text-align: left;
+}
+
+    .task-item strong {
+        display: block;
+        font-size: 1.1rem;
+        color: #00796b;
+    }
