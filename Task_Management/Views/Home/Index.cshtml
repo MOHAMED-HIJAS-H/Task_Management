@@ -7,6 +7,8 @@
     Layout = null;
 }
 
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -78,17 +80,17 @@
             <h2>Why Choose Task Manager?</h2>
             <div class="feature-grid">
                 <div class="feature">
-                    <h3>Smart Dashboard</h3>
-                    <p>Track tasks, deadlines, and progress all in one place.</p>
+                    <h3>✅Smart Dashboard</h3>
+                    <p>Track tasks and progress all in one place.</p>
                 </div>
-                <div class="feature">
-                    <h3>Team Collaboration</h3>
-                    <p>Share, assign, and manage tasks with your team effortlessly.</p>
-                </div>
-                <div class="feature">
+                  <div class="feature">
+                <h3>📅 Calendar View</h3>
+                <p>Visualize tasks by date using a calendar for better planning.</p>
+            </div>
+                @* <div class="feature">
                     <h3>Cloud Sync</h3>
                     <p>Access your tasks from anywhere, anytime with secure sync.</p>
-                </div>
+                </div> *@
             </div>
         </div>
     </section>
@@ -105,22 +107,45 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2>Contact Us</h2>
-            <form>
-                <input type="text" placeholder="Your Name" required />
-                <input type="email" placeholder="Your Email" required />
-                <textarea placeholder="Your Message" required></textarea>
-                <button type="submit" class="btn">Send Message</button>
-            </form>
-        </div>
-    </section>
+<!-- Contact Section -->
+<section id="contact" class="contact">
+    <div class="container">
+        <h2>Contact Us</h2>
+
+        @* ✅ Display Success or Error Alert *@
+        @if (TempData["Success"] != null || TempData["Error"] != null)
+        {
+            <div id="alertBox" class="alert @(TempData["Success"] != null ? "success" : "error")">
+                <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                @TempData["Success"] ?? @TempData["Error"]
+            </div>
+        }
+
+        <form asp-controller="Home" asp-action="SubmitContact" method="post">
+            <input type="text" name="Name" placeholder="Your Name" required />
+            <input type="email" name="Email" placeholder="Your Email" required />
+            <textarea name="Message" placeholder="Your Message" required></textarea>
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+    </div>
+</section>
+
+
 
     <footer>
         <p>&copy; 2025 Task Manager. All rights reserved.</p>
     </footer>
+        
+   <script>
+    window.onload = function () {
+        const alert = document.getElementById("alertBox");
+        if (alert) {
+            setTimeout(() => {
+                alert.style.display = "none";
+            }, 4000); // Auto-close after 4 seconds
+        }
+    };
+</script>
 
 </body>
 </html>

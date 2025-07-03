@@ -14,4 +14,10 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Task_Management.DataAccess\Task_Management.DataAccess.csproj" />
+    <ProjectReference Include="..\Task_Management.Domain\Task_Management.Domain.csproj" />
+    <ProjectReference Include="..\Task_Management.Service\Task_Management.Service.csproj" />
+  </ItemGroup>
+
 </Project>

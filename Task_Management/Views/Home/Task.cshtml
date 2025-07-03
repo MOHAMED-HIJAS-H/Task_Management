@@ -15,17 +15,27 @@
 </head>
 
 <body>
+    <!-- Top-right profile display -->
+    <div class="top-right-profile">
+        <div class="user-profile">
+            <span class="profile-icon">👤</span>
+            <span class="username">@ViewBag.Username</span>
+        </div>
+    </div>
     <section class="taskManager">
         <header class="card">
+           
+
             <h1>Task Manager ✅</h1>
+
             <form id="taskForm">
                 <input type="text" id="taskInput" placeholder="Add a task..." required>
                 <button type="submit" id="addTaskBtn">Add Task</button>
             </form>
 
-            <!-- Back Button -->
             <a href="/Home/Index" class="back-btn">Back to Home</a>
         </header>
+
    
 
         <section id="taskContainer">
@@ -35,7 +45,8 @@
             {
                 var task = Model[i];
 
-                <div class="taskCard @(task.IsCompleted ? "completed" : "pending")" data-index="@i">
+                <div class="taskCard 
+                    @(task.IsCompleted ? "completed" : "pending")" data-index="@task.Id">
 
                     <p>@task.Title</p>
                     <p class="status">@(task.IsCompleted ? "Completed" : "Pending")</p>

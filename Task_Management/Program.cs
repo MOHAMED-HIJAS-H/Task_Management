@@ -1,7 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Task_Management.Models; // Replace with your actual project namespace
-using Task_Management.Data; // ✅ Match your namespace and folder
-
+using Task_Management.Domain.Interfaces;
+using Task_Management.Service;
+using Task_Management.DataAccess;
+using Task_Management.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,10 +10,13 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 
 // ✅ ADD your DbContext registration here
+//builder.Services.AddDbContext<UserContext>(options =>
+//{
+//    options.UseSqlServer("Server=.;Database=Task;Trusted_Connection=True;TrustServerCertificate=True");
+//});
+
 builder.Services.AddDbContext<UserContext>(options =>
-{
-    options.UseSqlServer("Server=.;Database=Task;Trusted_Connection=True;TrustServerCertificate=True");
-});
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 builder.Services.AddAuthentication("CustomAuth")
     .AddCookie("CustomAuth", options =>
@@ -22,6 +26,8 @@ builder.Services.AddAuthentication("CustomAuth")
     });
 
 
+builder.Services.AddScoped<ITaskRepository, TaskRepository>();
+builder.Services.AddScoped<ITaskService, TaskService>();
 
 
 

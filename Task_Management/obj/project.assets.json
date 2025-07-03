@@ -1598,6 +1598,43 @@
             "rid": "win"
           }
         }
+      },
+      "Task_Management.DataAccess/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "9.0.6",
+          "Task_Management.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Task_Management.DataAccess.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Task_Management.DataAccess.dll": {}
+        }
+      },
+      "Task_Management.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/Task_Management.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Task_Management.Domain.dll": {}
+        }
+      },
+      "Task_Management.Service/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "Task_Management.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Task_Management.Service.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Task_Management.Service.dll": {}
+        }
       }
     }
   },
@@ -4701,12 +4738,30 @@
         "system.windows.extensions.nuspec",
         "useSharedDesignerContext.txt"
       ]
+    },
+    "Task_Management.DataAccess/1.0.0": {
+      "type": "project",
+      "path": "../Task_Management.DataAccess/Task_Management.DataAccess.csproj",
+      "msbuildProject": "../Task_Management.DataAccess/Task_Management.DataAccess.csproj"
+    },
+    "Task_Management.Domain/1.0.0": {
+      "type": "project",
+      "path": "../Task_Management.Domain/Task_Management.Domain.csproj",
+      "msbuildProject": "../Task_Management.Domain/Task_Management.Domain.csproj"
+    },
+    "Task_Management.Service/1.0.0": {
+      "type": "project",
+      "path": "../Task_Management.Service/Task_Management.Service.csproj",
+      "msbuildProject": "../Task_Management.Service/Task_Management.Service.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net9.0": [
       "Microsoft.EntityFrameworkCore.SqlServer >= 9.0.6",
-      "Microsoft.EntityFrameworkCore.Tools >= 9.0.6"
+      "Microsoft.EntityFrameworkCore.Tools >= 9.0.6",
+      "Task_Management.DataAccess >= 1.0.0",
+      "Task_Management.Domain >= 1.0.0",
+      "Task_Management.Service >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -4740,7 +4795,17 @@
       "frameworks": {
         "net9.0": {
           "targetAlias": "net9.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Kaar User\\source\\repos\\Task_Management\\Task_Management.DataAccess\\Task_Management.DataAccess.csproj": {
+              "projectPath": "C:\\Users\\Kaar User\\source\\repos\\Task_Management\\Task_Management.DataAccess\\Task_Management.DataAccess.csproj"
+            },
+            "C:\\Users\\Kaar User\\source\\repos\\Task_Management\\Task_Management.Domain\\Task_Management.Domain.csproj": {
+              "projectPath": "C:\\Users\\Kaar User\\source\\repos\\Task_Management\\Task_Management.Domain\\Task_Management.Domain.csproj"
+            },
+            "C:\\Users\\Kaar User\\source\\repos\\Task_Management\\Task_Management.Service\\Task_Management.Service.csproj": {
+              "projectPath": "C:\\Users\\Kaar User\\source\\repos\\Task_Management\\Task_Management.Service\\Task_Management.Service.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

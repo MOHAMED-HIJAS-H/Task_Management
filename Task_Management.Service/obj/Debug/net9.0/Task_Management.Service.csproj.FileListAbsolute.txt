@@ -1,0 +1,16 @@
+C:\Users\Kaar User\source\repos\Task_Management\Task_Management.Service\obj\Debug\net9.0\Task_Management.Service.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Kaar User\source\repos\Task_Management\Task_Management.Service\obj\Debug\net9.0\Task_Management.Service.AssemblyInfoInputs.cache
+C:\Users\Kaar User\source\repos\Task_Management\Task_Management.Service\obj\Debug\net9.0\Task_Management.Service.AssemblyInfo.cs
+C:\Users\Kaar User\source\repos\Task_Management\Task_Management.Service\obj\Debug\net9.0\Task_Management.Service.csproj.CoreCompileInputs.cache
+C:\Users\Kaar User\source\repos\Task_Management\Task_Management.Service\obj\Debug\net9.0\Task_Management.Service.sourcelink.json
+C:\Users\Kaar User\source\repos\Task_Management\Task_Management.Service\bin\Debug\net9.0\Task_Management.Service.deps.json
+C:\Users\Kaar User\source\repos\Task_Management\Task_Management.Service\bin\Debug\net9.0\Task_Management.Service.dll
+C:\Users\Kaar User\source\repos\Task_Management\Task_Management.Service\bin\Debug\net9.0\Task_Management.Service.pdb
+C:\Users\Kaar User\source\repos\Task_Management\Task_Management.Service\bin\Debug\net9.0\Task_Management.Domain.dll
+C:\Users\Kaar User\source\repos\Task_Management\Task_Management.Service\bin\Debug\net9.0\Task_Management.Domain.pdb
+C:\Users\Kaar User\source\repos\Task_Management\Task_Management.Service\obj\Debug\net9.0\Task_Management.Service.csproj.AssemblyReference.cache
+C:\Users\Kaar User\source\repos\Task_Management\Task_Management.Service\obj\Debug\net9.0\Task_Man.25FD0FFD.Up2Date
+C:\Users\Kaar User\source\repos\Task_Management\Task_Management.Service\obj\Debug\net9.0\Task_Management.Service.dll
+C:\Users\Kaar User\source\repos\Task_Management\Task_Management.Service\obj\Debug\net9.0\refint\Task_Management.Service.dll
+C:\Users\Kaar User\source\repos\Task_Management\Task_Management.Service\obj\Debug\net9.0\Task_Management.Service.pdb
+C:\Users\Kaar User\source\repos\Task_Management\Task_Management.Service\obj\Debug\net9.0\ref\Task_Management.Service.dll

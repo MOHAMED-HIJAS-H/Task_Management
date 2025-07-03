@@ -3,8 +3,9 @@ using Microsoft.AspNetCore.Mvc;
 using System.Linq;
 using System.Security.Claims;
 using Task_Management.Data;   // ✅ For ApplicationDbContext
+using Task_Management.DataAccess;
 using Task_Management.Helpers;
-using Task_Management.Models; // ✅ Adjust to your namespace
+using Task_Management.Models;
 
 
 namespace Task_Management.Controllers
@@ -44,6 +45,7 @@ namespace Task_Management.Controllers
             }
             return View(user);
         }
+
 
         [HttpGet]
         public IActionResult Login() => View();
