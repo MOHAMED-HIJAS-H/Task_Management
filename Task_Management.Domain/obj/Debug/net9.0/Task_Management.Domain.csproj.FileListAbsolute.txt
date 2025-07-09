@@ -1,0 +1,12 @@
+C:\Users\Kaar User\source\repos\Task_Management\Task_Management.Domain\bin\Debug\net9.0\Task_Management.Domain.deps.json
+C:\Users\Kaar User\source\repos\Task_Management\Task_Management.Domain\bin\Debug\net9.0\Task_Management.Domain.dll
+C:\Users\Kaar User\source\repos\Task_Management\Task_Management.Domain\bin\Debug\net9.0\Task_Management.Domain.pdb
+C:\Users\Kaar User\source\repos\Task_Management\Task_Management.Domain\obj\Debug\net9.0\Task_Management.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Kaar User\source\repos\Task_Management\Task_Management.Domain\obj\Debug\net9.0\Task_Management.Domain.AssemblyInfoInputs.cache
+C:\Users\Kaar User\source\repos\Task_Management\Task_Management.Domain\obj\Debug\net9.0\Task_Management.Domain.AssemblyInfo.cs
+C:\Users\Kaar User\source\repos\Task_Management\Task_Management.Domain\obj\Debug\net9.0\Task_Management.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Kaar User\source\repos\Task_Management\Task_Management.Domain\obj\Debug\net9.0\Task_Management.Domain.sourcelink.json
+C:\Users\Kaar User\source\repos\Task_Management\Task_Management.Domain\obj\Debug\net9.0\Task_Management.Domain.dll
+C:\Users\Kaar User\source\repos\Task_Management\Task_Management.Domain\obj\Debug\net9.0\refint\Task_Management.Domain.dll
+C:\Users\Kaar User\source\repos\Task_Management\Task_Management.Domain\obj\Debug\net9.0\Task_Management.Domain.pdb
+C:\Users\Kaar User\source\repos\Task_Management\Task_Management.Domain\obj\Debug\net9.0\ref\Task_Management.Domain.dll

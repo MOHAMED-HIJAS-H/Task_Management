@@ -1,0 +1,460 @@
+﻿body {
+    font-family: Arial, sans-serif;
+    /*background: #bde0fe;*/
+    background-image: url('/Images/Meteor.svg');
+    background-size: cover; /* Cover full screen */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Don't repeat */
+    background-attachment: fixed; /* Keeps image fixed during scroll */
+    min-height: 100vh; /* Ensures background fills full screen height */
+    margin: 0; /* Remove body margin */
+    padding: 0;
+    font-family: sans-serif;
+}
+
+header {
+    background-color: #009688;
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+}
+
+/*user profile design in Top*/
+
+.card {
+    background-color: #fff;
+    width: 500px;
+    margin: 20px auto;
+    padding: 3rem 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    color: #333;
+}
+
+h1 {
+    color: #000;
+    font-size: 28px;
+    margin: 0 0 1.2em 0;
+}
+
+
+
+h3 {
+    margin-top: 0;
+}
+
+/*Task input and Search Input*/
+/* ---------- Common form style ---------- */
+/* ---------- Form Layout ---------- */
+#taskForm,
+#searchForm {
+    display: flex;
+    gap: 16px; /* 🟢 Gap between input and button */
+    margin-bottom: 20px; /* 🟢 Gap between forms */
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* ---------- Input Styling ---------- */
+#taskInput,
+#taskSearch {
+    flex: 1;
+    padding: 14px 18px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    outline: none;
+    min-width: 250px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease;
+}
+
+    #taskInput:focus,
+    #taskSearch:focus {
+        border-color: #8ab4f8;
+        background-color: #fff;
+        box-shadow: 0 0 6px rgba(138, 180, 248, 0.4);
+    }
+
+/* ---------- Button Styling (Soft Pastel Colors) ---------- */
+#addTaskBtn,
+#searchBtn {
+    padding: 14px 24px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    min-width: 120px;
+    white-space: nowrap;
+}
+
+/* ✨ New Soft Button Colors */
+#addTaskBtn {
+    background: #7cc6fe;
+}
+
+    #addTaskBtn:hover {
+        background: #5ab0f5;
+    }
+
+#searchBtn {
+    background: #a4deaa;
+}
+
+    #searchBtn:hover {
+        background: #7fd88c;
+    }
+
+/* ---------- Mobile Responsive ---------- */
+@media (max-width: 600px) {
+    #taskForm,
+    #searchForm {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    #taskInput,
+    #taskSearch,
+    #addTaskBtn,
+    #searchBtn {
+        width: 100%;
+    }
+}
+
+/*----------------------*/
+
+
+
+button[type="submit"] {
+    background-color: #ff4e00;
+    background-image: linear-gradient(315deg, #ff4e00 0%, #ec9f05 74%);
+    color: #333;
+    padding: 15px 7px;
+    border: none;
+    border-radius: 0 7px 7px 0;
+    margin-left: -15px;
+    cursor: pointer;
+    width: 5rem;
+}
+
+
+button:hover {
+    background-color: #a4508b;
+    background-image: linear-gradient(326deg, #a4508b 0%, #5f0a87 74%);
+    color: #fff;
+}
+
+#taskContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Horizontally center */
+    gap: 20px; /* Space between cards */
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.taskCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    background-color: #ffffff;
+    box-shadow: 5px 5px 20px rgba(203, 205, 211, 0.1);
+    padding: 16px;
+    top: 1rem;
+    width: 300px;
+    min-height: 175px;
+    margin: 15px;
+    border-radius: 10px;
+    transition: box-shadow 0.3s ease;
+}
+
+    .taskCard.completed {
+        background: linear-gradient(to bottom right, #a8e063 30%, #56ab2f 100%);
+        padding: 10px;
+        text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.4);
+        color: #1f1f1f; /* Dark text for better readability */
+        border-left: 5px solid #4caf50; /* Subtle green highlight */
+    }
+
+
+/*    .taskCard.pending {
+        background: linear-gradient(to bottom left, #E57488 40%, #FFB27A 100%);
+    }*/
+    .taskCard.pending {
+        background: linear-gradient(to bottom left, #fda085 30%, #f6d365 100%);
+        padding: 10px;
+        text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.4);
+        color: #1f1f1f; /* Make text darker for better readability */
+        border-left: 5px solid #ff6f61; /* Subtle highlight strip */
+    }
+
+    .taskCard.completed {
+        background-color: #dcedc8; /* light green */
+    }
+
+    .taskCard.pending {
+        background-color: #ffcdd2; /* light red */
+    }
+
+
+    .taskCard:hover {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    .taskCard p {
+        margin: 0;
+        font-size: 1.2rem;
+        color: #2c2c2c; /* Neutral dark gray */
+        font-weight: 600; /* Make it more visible */
+        word-wrap: break-word;
+        text-align:center;
+    }
+
+
+
+    .taskCard .status {
+        margin-top: 10px;
+        font-size: 14px;
+        font-size: 1.1em;
+        font-weight: 100;
+        color: #5e5e5e;
+        letter-spacing: 1px;
+    }
+
+ =========================== 
+    Task button styling      
+ =========================== 
+
+.button-box {
+    background: #FCFCFC;
+    border-radius: 20px;
+    outline: 0;
+    border: none;
+    box-shadow: 2px 2px 10px rgba(119, 119, 119, 0.5);
+    transition: all 0.5s ease-in-out;
+    margin-top: 1rem;
+    padding: 12px 10px;
+}
+
+    .button-box:hover {
+        background: #efefef;
+        transform: scale(1.05);
+        transition: all 0.3s ease-in-out;
+        cursor: pointer;
+    }
+
+.green {
+    color: #4ec07d;
+}
+
+.red {
+    color: #e96075;
+}
+
+/*.button-box span {
+    font-size: 0.9em;
+    font-weight: 100;
+    letter-spacing: 3px;
+    padding-top: 5px;
+     color: #FCFCFC; 
+    padding-bottom: 5px;
+    text-transform: uppercase;
+}*/
+.button-box span {
+    font-size: 0.9em;
+    font-weight: 500; /* make it medium-bold */
+    letter-spacing: 1px;
+    padding-top: 5px;
+    color: #1f1f1f; /* Strong dark color for visibility */
+    padding-bottom: 5px;
+    text-transform: uppercase;
+}
+
+
+ =========================== 
+ Confirmation popup styling 
+ =========================== 
+
+.overlay {
+    position: relative;
+}
+
+    .overlay::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.9);
+    }
+
+@keyframes fade {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.8);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+.confirm {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    min-width: 280px;
+    max-width: 500px;
+    height: auto;
+    background: #E2E2E2;
+    border-radius: 10px;
+    padding: 0;
+    margin: 0;
+    border-top: 1px solid white;
+    animation: fade 0.5s ease 1 forwards;
+}
+
+    .confirm h1 {
+        text-align: center;
+        font-size: 1.2rem;
+        margin: 1.5rem 1rem 0.5rem;
+    }
+
+    .confirm p {
+        text-align: center;
+        font-size: 1rem;
+        margin: 0 2rem 4.5rem;
+    }
+
+    .confirm button {
+        background: transparent;
+        border: none;
+        color: #1678E5;
+        height: 3rem;
+        font-size: 1rem;
+        width: 50%;
+        position: absolute;
+        bottom: 0;
+        cursor: pointer;
+    }
+
+        .confirm button:nth-of-type(1) {
+            border-top: 1px solid #B4B4B4;
+            border-right: 1px solid #B4B4B4;
+            left: 0;
+            border-radius: 0 0 0 10px;
+        }
+
+        .confirm button:nth-of-type(2) {
+            border-top: 1px solid #B4B4B4;
+            right: 0;
+            border-radius: 0 0 10px 0;
+        }
+
+        .confirm button:focus,
+        .confirm button:hover {
+            font-weight: bold;
+            background: #EFEFEF;
+        }
+
+        .confirm button:active {
+            background: #D6D6D6;
+        }
+.back-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #a2d2ff;
+    color: #1f1f1f;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+    .back-btn:hover {
+        background-color: #91c9ff;
+        transform: translateY(-2px);
+    }
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+    .card {
+        width: 90%; /* Use most of the screen width */
+        padding: 2rem 1rem;
+    }
+
+    #taskForm {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #taskInput {
+        margin-right: 0;
+        border-radius: 5px;
+        width: 100%;
+    }
+
+    button[type="submit"] {
+        width: 100%;
+        border-radius: 5px;
+        margin-left: 0;
+        padding: 15px 0;
+    }
+
+    #taskContainer {
+        flex-direction: column;
+        align-items: center;
+        margin: 10px 0;
+    }
+
+    .taskCard {
+        width: 90%;
+        margin: 10px 0;
+    }
+
+}
+/*// user color-profile in the top*/
+.top-right-profile {
+    position: fixed;
+    top: 20px;
+    right: 30px;
+    z-index: 1000;
+    background-color: #ffffffee;
+    padding: 8px 15px;
+    border-radius: 20px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    font-weight: bold;
+    font-size: 1rem;
+    color: #333;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: slideFade 1s ease-out forwards;
+}
+
+.profile-icon {
+    font-size: 1.2rem;
+}
+
+/* Animation */
+@keyframes slideFade {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+

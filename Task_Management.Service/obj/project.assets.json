@@ -1,0 +1,102 @@
+{
+  "version": 3,
+  "targets": {
+    "net9.0": {
+      "Task_Management.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/Task_Management.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Task_Management.Domain.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Task_Management.Domain/1.0.0": {
+      "type": "project",
+      "path": "../Task_Management.Domain/Task_Management.Domain.csproj",
+      "msbuildProject": "../Task_Management.Domain/Task_Management.Domain.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net9.0": [
+      "Task_Management.Domain >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\Kaar User\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\Kaar User\\source\\repos\\Task_Management\\Task_Management.Service\\Task_Management.Service.csproj",
+      "projectName": "Task_Management.Service",
+      "projectPath": "C:\\Users\\Kaar User\\source\\repos\\Task_Management\\Task_Management.Service\\Task_Management.Service.csproj",
+      "packagesPath": "C:\\Users\\Kaar User\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Kaar User\\source\\repos\\Task_Management\\Task_Management.Service\\obj\\",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\Kaar User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net9.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "projectReferences": {
+            "C:\\Users\\Kaar User\\source\\repos\\Task_Management\\Task_Management.Domain\\Task_Management.Domain.csproj": {
+              "projectPath": "C:\\Users\\Kaar User\\source\\repos\\Task_Management\\Task_Management.Domain\\Task_Management.Domain.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
+      },
+      "SdkAnalysisLevel": "9.0.300"
+    },
+    "frameworks": {
+      "net9.0": {
+        "targetAlias": "net9.0",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.300/PortableRuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}
