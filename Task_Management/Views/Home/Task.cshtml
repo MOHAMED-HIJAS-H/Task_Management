@@ -33,11 +33,16 @@
                 <button type="submit" id="addTaskBtn">Add Task</button>
             </form>
 
+            <form id="searchForm">
+                <input type="text" id="taskSearch" placeholder="Search your task..." />
+                <button type="submit" id="searchBtn">Search</button>
+            </form>
+
             <a href="/Home/Index" class="back-btn">Back to Home</a>
         </header>
 
    
-
+        
         <section id="taskContainer">
             @* <h1>Tasks</h1> *@
             <br />
@@ -45,8 +50,7 @@
             {
                 var task = Model[i];
 
-                <div class="taskCard 
-                    @(task.IsCompleted ? "completed" : "pending")" data-index="@task.Id">
+                <div class="taskCard @(task.IsCompleted ? "completed" : "pending")" data-index="@task.Id">
 
                     <p>@task.Title</p>
                     <p class="status">@(task.IsCompleted ? "Completed" : "Pending")</p>
@@ -60,8 +64,12 @@
                     </button>
                 </div>
             }
+            @if (Model.Count == 0)
+            {
+                <p style="text-align:center; font-size: 18px;">No tasks found.</p>
+            }
         </section>
-    </section>
+   
 
     <div class="confirm" style="display:;">
         <h1>Confirm your action</h1>

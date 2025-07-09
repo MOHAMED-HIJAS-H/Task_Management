@@ -7,13 +7,13 @@ namespace Task_Management.Models
     {
         public int Id { get; set; }
 
-        [Required]
+        //[Required]
         public string Name { get; set; }
 
-        [Required, EmailAddress]
+        //[Required, EmailAddress]
         public string Email { get; set; }
 
-        [Required]
+        //[Required]
         public string Message { get; set; }
 
         public DateTime SubmittedAt { get; set; } = DateTime.Now;

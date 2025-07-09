@@ -1,7 +1,72 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\Kaar User\\source\\repos\\Task_Management\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{72FF5BF2-CF9E-43D6-823E-3A210C5A26AA}|Task_Management\\Task_Management.csproj|c:\\users\\kaar user\\source\\repos\\task_management\\task_management\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{72FF5BF2-CF9E-43D6-823E-3A210C5A26AA}|Task_Management\\Task_Management.csproj|solutionrelative:task_management\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{72FF5BF2-CF9E-43D6-823E-3A210C5A26AA}|Task_Management\\Task_Management.csproj|c:\\users\\kaar user\\source\\repos\\task_management\\task_management\\wwwroot\\css\\task.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{72FF5BF2-CF9E-43D6-823E-3A210C5A26AA}|Task_Management\\Task_Management.csproj|solutionrelative:task_management\\wwwroot\\css\\task.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{72FF5BF2-CF9E-43D6-823E-3A210C5A26AA}|Task_Management\\Task_Management.csproj|c:\\users\\kaar user\\source\\repos\\task_management\\task_management\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{72FF5BF2-CF9E-43D6-823E-3A210C5A26AA}|Task_Management\\Task_Management.csproj|solutionrelative:task_management\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{72FF5BF2-CF9E-43D6-823E-3A210C5A26AA}|Task_Management\\Task_Management.csproj|c:\\users\\kaar user\\source\\repos\\task_management\\task_management\\views\\home\\task.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{72FF5BF2-CF9E-43D6-823E-3A210C5A26AA}|Task_Management\\Task_Management.csproj|solutionrelative:task_management\\views\\home\\task.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{72FF5BF2-CF9E-43D6-823E-3A210C5A26AA}|Task_Management\\Task_Management.csproj|c:\\users\\kaar user\\source\\repos\\task_management\\task_management\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{72FF5BF2-CF9E-43D6-823E-3A210C5A26AA}|Task_Management\\Task_Management.csproj|solutionrelative:task_management\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F22E5796-18F2-4370-95A9-92CEA07309C2}|Task_Management.Service\\Task_Management.Service.csproj|c:\\users\\kaar user\\source\\repos\\task_management\\task_management.service\\taskservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F22E5796-18F2-4370-95A9-92CEA07309C2}|Task_Management.Service\\Task_Management.Service.csproj|solutionrelative:task_management.service\\taskservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F22E5796-18F2-4370-95A9-92CEA07309C2}|Task_Management.Service\\Task_Management.Service.csproj|c:\\users\\kaar user\\source\\repos\\task_management\\task_management.service\\helpers\\passwordhasher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F22E5796-18F2-4370-95A9-92CEA07309C2}|Task_Management.Service\\Task_Management.Service.csproj|solutionrelative:task_management.service\\helpers\\passwordhasher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6B86B46B-4F47-4E67-8DB0-26AE9A0382C5}|Task_Management.Domain\\Task_Management.Domain.csproj|c:\\users\\kaar user\\source\\repos\\task_management\\task_management.domain\\interfaces\\itaskservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6B86B46B-4F47-4E67-8DB0-26AE9A0382C5}|Task_Management.Domain\\Task_Management.Domain.csproj|solutionrelative:task_management.domain\\interfaces\\itaskservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{72FF5BF2-CF9E-43D6-823E-3A210C5A26AA}|Task_Management\\Task_Management.csproj|c:\\users\\kaar user\\source\\repos\\task_management\\task_management\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{72FF5BF2-CF9E-43D6-823E-3A210C5A26AA}|Task_Management\\Task_Management.csproj|solutionrelative:task_management\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{89386B63-9F85-46B4-989D-2E6C72A2C533}|Task_Management.DataAccess\\Task_Management.DataAccess.csproj|c:\\users\\kaar user\\source\\repos\\task_management\\task_management.dataaccess\\taskrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{89386B63-9F85-46B4-989D-2E6C72A2C533}|Task_Management.DataAccess\\Task_Management.DataAccess.csproj|solutionrelative:task_management.dataaccess\\taskrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6B86B46B-4F47-4E67-8DB0-26AE9A0382C5}|Task_Management.Domain\\Task_Management.Domain.csproj|c:\\users\\kaar user\\source\\repos\\task_management\\task_management.domain\\interfaces\\itaskrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6B86B46B-4F47-4E67-8DB0-26AE9A0382C5}|Task_Management.Domain\\Task_Management.Domain.csproj|solutionrelative:task_management.domain\\interfaces\\itaskrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{72FF5BF2-CF9E-43D6-823E-3A210C5A26AA}|Task_Management\\Task_Management.csproj|c:\\users\\kaar user\\source\\repos\\task_management\\task_management\\task_management.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{72FF5BF2-CF9E-43D6-823E-3A210C5A26AA}|Task_Management\\Task_Management.csproj|solutionrelative:task_management\\task_management.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6B86B46B-4F47-4E67-8DB0-26AE9A0382C5}|Task_Management.Domain\\Task_Management.Domain.csproj|c:\\users\\kaar user\\source\\repos\\task_management\\task_management.domain\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6B86B46B-4F47-4E67-8DB0-26AE9A0382C5}|Task_Management.Domain\\Task_Management.Domain.csproj|solutionrelative:task_management.domain\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{72FF5BF2-CF9E-43D6-823E-3A210C5A26AA}|Task_Management\\Task_Management.csproj|c:\\users\\kaar user\\source\\repos\\task_management\\task_management\\wwwroot\\css\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{72FF5BF2-CF9E-43D6-823E-3A210C5A26AA}|Task_Management\\Task_Management.csproj|solutionrelative:task_management\\wwwroot\\css\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{72FF5BF2-CF9E-43D6-823E-3A210C5A26AA}|Task_Management\\Task_Management.csproj|c:\\users\\kaar user\\source\\repos\\task_management\\task_management\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{72FF5BF2-CF9E-43D6-823E-3A210C5A26AA}|Task_Management\\Task_Management.csproj|solutionrelative:task_management\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{72FF5BF2-CF9E-43D6-823E-3A210C5A26AA}|Task_Management\\Task_Management.csproj|c:\\users\\kaar user\\source\\repos\\task_management\\task_management\\data\\memorydatastore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{72FF5BF2-CF9E-43D6-823E-3A210C5A26AA}|Task_Management\\Task_Management.csproj|solutionrelative:task_management\\data\\memorydatastore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,11 +74,206 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 7,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "site.js",
+              "DocumentMoniker": "C:\\Users\\Kaar User\\source\\repos\\Task_Management\\Task_Management\\wwwroot\\js\\site.js",
+              "RelativeDocumentMoniker": "Task_Management\\wwwroot\\js\\site.js",
+              "ToolTip": "C:\\Users\\Kaar User\\source\\repos\\Task_Management\\Task_Management\\wwwroot\\js\\site.js",
+              "RelativeToolTip": "Task_Management\\wwwroot\\js\\site.js",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAUwDMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-07-08T06:39:39.896Z",
+              "IsPinned": true
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Task.css",
+              "DocumentMoniker": "C:\\Users\\Kaar User\\source\\repos\\Task_Management\\Task_Management\\wwwroot\\css\\Task.css",
+              "RelativeDocumentMoniker": "Task_Management\\wwwroot\\css\\Task.css",
+              "ToolTip": "C:\\Users\\Kaar User\\source\\repos\\Task_Management\\Task_Management\\wwwroot\\css\\Task.css",
+              "RelativeToolTip": "Task_Management\\wwwroot\\css\\Task.css",
+              "ViewState": "AgIAALQAAAAAAAAAAAAcwJsAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-07-07T04:24:09.046Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "TaskRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Kaar User\\source\\repos\\Task_Management\\Task_Management.DataAccess\\TaskRepository.cs",
+              "RelativeDocumentMoniker": "Task_Management.DataAccess\\TaskRepository.cs",
+              "ToolTip": "C:\\Users\\Kaar User\\source\\repos\\Task_Management\\Task_Management.DataAccess\\TaskRepository.cs",
+              "RelativeToolTip": "Task_Management.DataAccess\\TaskRepository.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAIAwwDgAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-08T04:14:24.482Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ITaskService.cs",
+              "DocumentMoniker": "C:\\Users\\Kaar User\\source\\repos\\Task_Management\\Task_Management.Domain\\Interfaces\\ITaskService.cs",
+              "RelativeDocumentMoniker": "Task_Management.Domain\\Interfaces\\ITaskService.cs",
+              "ToolTip": "C:\\Users\\Kaar User\\source\\repos\\Task_Management\\Task_Management.Domain\\Interfaces\\ITaskService.cs",
+              "RelativeToolTip": "Task_Management.Domain\\Interfaces\\ITaskService.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAA/wBUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-08T04:20:25.114Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "PasswordHasher.cs",
+              "DocumentMoniker": "C:\\Users\\Kaar User\\source\\repos\\Task_Management\\Task_Management.Service\\Helpers\\PasswordHasher.cs",
+              "RelativeDocumentMoniker": "Task_Management.Service\\Helpers\\PasswordHasher.cs",
+              "ToolTip": "C:\\Users\\Kaar User\\source\\repos\\Task_Management\\Task_Management.Service\\Helpers\\PasswordHasher.cs",
+              "RelativeToolTip": "Task_Management.Service\\Helpers\\PasswordHasher.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-08T16:17:50.745Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\Kaar User\\source\\repos\\Task_Management\\Task_Management\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Task_Management\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\Kaar User\\source\\repos\\Task_Management\\Task_Management\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Task_Management\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAIUAAAAAAAAAAAAmwJ4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-06T08:20:47.249Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Kaar User\\source\\repos\\Task_Management\\Task_Management\\Program.cs",
+              "RelativeDocumentMoniker": "Task_Management\\Program.cs",
+              "ToolTip": "C:\\Users\\Kaar User\\source\\repos\\Task_Management\\Task_Management\\Program.cs",
+              "RelativeToolTip": "Task_Management\\Program.cs",
+              "ViewState": "AgIAACkAAAAAAAAAAAAlwDkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-07T11:14:56.106Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "TaskService.cs",
+              "DocumentMoniker": "C:\\Users\\Kaar User\\source\\repos\\Task_Management\\Task_Management.Service\\TaskService.cs",
+              "RelativeDocumentMoniker": "Task_Management.Service\\TaskService.cs",
+              "ToolTip": "C:\\Users\\Kaar User\\source\\repos\\Task_Management\\Task_Management.Service\\TaskService.cs",
+              "RelativeToolTip": "Task_Management.Service\\TaskService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-07T11:24:30.436Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "C:\\Users\\Kaar User\\source\\repos\\Task_Management\\Task_Management\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "Task_Management\\Controllers\\AccountController.cs",
+              "ToolTip": "C:\\Users\\Kaar User\\source\\repos\\Task_Management\\Task_Management\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "Task_Management\\Controllers\\AccountController.cs",
+              "ViewState": "AgIAAGQAAAAAAAAAAAAkwGkAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-08T04:28:26.136Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Task.cshtml",
+              "DocumentMoniker": "C:\\Users\\Kaar User\\source\\repos\\Task_Management\\Task_Management\\Views\\Home\\Task.cshtml",
+              "RelativeDocumentMoniker": "Task_Management\\Views\\Home\\Task.cshtml",
+              "ToolTip": "C:\\Users\\Kaar User\\source\\repos\\Task_Management\\Task_Management\\Views\\Home\\Task.cshtml",
+              "RelativeToolTip": "Task_Management\\Views\\Home\\Task.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-08T06:36:46.523Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Task_Management.csproj",
+              "DocumentMoniker": "C:\\Users\\Kaar User\\source\\repos\\Task_Management\\Task_Management\\Task_Management.csproj",
+              "RelativeDocumentMoniker": "Task_Management\\Task_Management.csproj",
+              "ToolTip": "C:\\Users\\Kaar User\\source\\repos\\Task_Management\\Task_Management\\Task_Management.csproj",
+              "RelativeToolTip": "Task_Management\\Task_Management.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-07-08T13:38:46.441Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ITaskRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Kaar User\\source\\repos\\Task_Management\\Task_Management.Domain\\Interfaces\\ITaskRepository.cs",
+              "RelativeDocumentMoniker": "Task_Management.Domain\\Interfaces\\ITaskRepository.cs",
+              "ToolTip": "C:\\Users\\Kaar User\\source\\repos\\Task_Management\\Task_Management.Domain\\Interfaces\\ITaskRepository.cs",
+              "RelativeToolTip": "Task_Management.Domain\\Interfaces\\ITaskRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-08T04:27:15.839Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\Kaar User\\source\\repos\\Task_Management\\Task_Management.Domain\\Models\\User.cs",
+              "RelativeDocumentMoniker": "Task_Management.Domain\\Models\\User.cs",
+              "ToolTip": "C:\\Users\\Kaar User\\source\\repos\\Task_Management\\Task_Management.Domain\\Models\\User.cs",
+              "RelativeToolTip": "Task_Management.Domain\\Models\\User.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAIwA4AAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-07T05:26:46.958Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "MemoryDataStore.cs",
+              "DocumentMoniker": "C:\\Users\\Kaar User\\source\\repos\\Task_Management\\Task_Management\\Data\\MemoryDataStore.cs",
+              "RelativeDocumentMoniker": "Task_Management\\Data\\MemoryDataStore.cs",
+              "ToolTip": "C:\\Users\\Kaar User\\source\\repos\\Task_Management\\Task_Management\\Data\\MemoryDataStore.cs",
+              "RelativeToolTip": "Task_Management\\Data\\MemoryDataStore.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-03T07:28:25.23Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Style.css",
+              "DocumentMoniker": "C:\\Users\\Kaar User\\source\\repos\\Task_Management\\Task_Management\\wwwroot\\css\\Style.css",
+              "RelativeDocumentMoniker": "Task_Management\\wwwroot\\css\\Style.css",
+              "ToolTip": "C:\\Users\\Kaar User\\source\\repos\\Task_Management\\Task_Management\\wwwroot\\css\\Style.css",
+              "RelativeToolTip": "Task_Management\\wwwroot\\css\\Style.css",
+              "ViewState": "AgIAAPkAAAAAAAAAAAAYwBEBAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-07-06T08:27:40.745Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Kaar User\\source\\repos\\Task_Management\\Task_Management\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Task_Management\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Kaar User\\source\\repos\\Task_Management\\Task_Management\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Task_Management\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAADAAAAAAAAAAAAAAADwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-06T07:58:19.41Z"
             }
           ]
         }

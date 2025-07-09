@@ -15,22 +15,42 @@ $(document).ready(function () {
         const taskInput = $('#taskInput').val().trim();
 
         if (taskInput !== '') {
-            alert('User task is created');
+            //alert('User task is created');
 
             $.ajax({
-                url: "/home/task",
+                url: "/home/task", 
                 type: "POST",
                 data: JSON.stringify(taskInput),
                 contentType: "application/json",
                 success: function () {
                     window.location.reload();
                 },
-                error: function () {
-                    alert("Error adding task.");
+                error: function (xhr) {
+                    console.error("Error:", xhr.responseText);
+                    alert("Error adding task: " + xhr.responseText);
                 }
             });
         }
     });
+
+    // 🔍 Simple Client-Side Search Logic
+    $('#searchForm').submit(function (e) {
+        e.preventDefault();
+
+        const keyword = $('#taskSearch').val().toLowerCase().trim();
+
+        $('.taskCard').each(function () {
+            const title = $(this).find('p:first').text().toLowerCase();
+
+            if (title.includes(keyword)) {
+                $(this).show();  // Show matching task
+            } else {
+                $(this).hide();  // Hide non-matching task
+            }
+        });
+    });
+
+
 
     // Toggle task completion
     $('.toggleBtn').on('click', function () {
@@ -77,6 +97,17 @@ $(document).ready(function () {
         confirmEl.style.display = "none";
         taskManagerContainer.classList.remove("overlay");
     });
+
+
+
+
+
+
+
+
+
+
+
 
     //to submit the form without page reload in ContactForm
         //$('#contactForm').submit(function (e) {

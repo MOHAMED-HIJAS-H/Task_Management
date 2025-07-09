@@ -24,6 +24,45 @@ h1, h2, h3 {
     color: #1f1f1f;
 }
 
+.top-right-profile {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: white;
+    border-radius: 25px;
+    padding: 8px 16px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    z-index: 999; /* ensures it stays on top */
+    font-family: sans-serif;
+    font-weight: 600;
+}
+
+.profile-icon {
+    font-size: 20px;
+    color: purple;
+    margin-right: 8px;
+}
+
+.username {
+    color: #333;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    .top-right-profile {
+        top: 10px;
+        right: 10px;
+        font-size: 14px;
+        padding: 6px 12px;
+    }
+
+    .profile-icon {
+        font-size: 18px;
+    }
+}
 
 
 /*button styling*/
@@ -121,8 +160,7 @@ h1, h2, h3 {
 
 /* ------------------- PROGRESS SECTION ------------------- */
 /* 🌟 Progress Section Styles */
-/* 🎯 Progress Section Background and Header */
-/* 🌟 Progress Section Styles */
+
 .progress-section {
     background: linear-gradient(135deg, #bde0fe, #a2d2ff);
     padding: 60px 20px;
@@ -167,6 +205,7 @@ h1, h2, h3 {
         color: white;
         transform: scale(1.05);
     }
+
     /* Line between steps */
     .step:not(:last-child)::after {
         content: '';
@@ -195,7 +234,6 @@ h1, h2, h3 {
         border-left: 10px solid #0072ff;
         z-index: 2;
     }
-
 
     .step:hover {
         transform: scale(1.1);
@@ -227,6 +265,35 @@ h1, h2, h3 {
         transform: translateY(0);
     }
 }
+
+/*🌐 Responsive Styling for Progress Tracker */
+@media (max-width: 768px) {
+    .progress-bar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .step {
+        width: 100%;
+        text-align: left;
+        border-radius: 10px;
+        margin: 10px 0;
+        padding-left: 20px;
+        position: relative;
+        background: #e0f0ff;
+        border-left: 5px solid #0072ff;
+    }
+
+        /* ✅ Completely hide arrows and lines in mobile */
+        .step:not(:last-child)::before,
+        .step:not(:last-child)::after {
+            display: none !important;
+            content: unset !important;
+        }
+}
+
+
 
 /* ------------------- FEATURES SECTION ------------------- */
 .features {

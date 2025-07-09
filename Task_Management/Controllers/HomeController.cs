@@ -2,6 +2,7 @@
 using System.Diagnostics;
 using Task_Management.Data;
 using Task_Management.DataAccess;
+using Task_Management.Domain.Interfaces;
 using Task_Management.Models;
 
 
@@ -11,15 +12,22 @@ namespace Task_Management.Controllers
     {
         private readonly ILogger<HomeController> _logger;
         private readonly UserContext _userContext;
+        private readonly ITaskService _taskService;
 
-        public HomeController(ILogger<HomeController> logger, UserContext context)
+        public HomeController(ILogger<HomeController> logger, UserContext context,ITaskService taskService)
         {
             _logger = logger;
             _userContext = context;
+            _taskService = taskService; // Injecting the task service
         }
 
         public IActionResult Index()
         {
+            var username = (User?.Identity != null && User.Identity.IsAuthenticated)
+      ? User.Claims.FirstOrDefault(c => c.Type == System.Security.Claims.ClaimTypes.Name)?.Value
+      : "Guest";
+            ViewBag.Username = username;
+
             return View(); // If you want to show tasks, replace with Tasks list
         }
 
@@ -45,7 +53,7 @@ namespace Task_Management.Controllers
         }
 
         [HttpPost]
-        public IActionResult Task([FromBody] string task)
+        public async Task<IActionResult> Task([FromBody] string task)
         {
             var newTask = new Task_Management.Models.Task
             {
@@ -53,22 +61,25 @@ namespace Task_Management.Controllers
                 IsCompleted = false
             };
 
-            _userContext.Tasks.Add(newTask);
-            _userContext.SaveChanges();
+            //_userContext.Tasks.Add(newTask);
+            //_userContext.SaveChanges();
+            await _taskService.AddNewTaskAsync(newTask); // Use the task service to add the task
 
-            var updatedTasks = _userContext.Tasks.ToList();
+            //var updatedTasks = _userContext.Tasks.ToList();
+            var updatedTasks = await _taskService.GetTasksAsync(); // Get updated tasks from the service
             return Json(new { success = true, tasks = updatedTasks });
         }
 
         [HttpPost]
-        public IActionResult Toggle(int id)
+        public async Task<IActionResult> Toggle(int id)
         {
-            var task = _userContext.Tasks.FirstOrDefault(t => t.Id == id);
-            if (task != null)
-            {
-                task.IsCompleted = !task.IsCompleted;
-                _userContext.SaveChanges();
-            }
+            //var task = _userContext.Tasks.FirstOrDefault(t => t.Id == id);
+            //if (task != null)
+            //{
+            //    task.IsCompleted = !task.IsCompleted;
+            //    _userContext.SaveChanges();
+            //}
+            await _taskService.CompleteTaskAsync(id); // Use the task service to toggle completion
             return Ok();
         }
 
@@ -83,18 +94,16 @@ namespace Task_Management.Controllers
         //    }
         //    return Ok();
         //}
+        
+        
 
         [HttpPost("/home/delete/{id}")]
-        public IActionResult Delete(int id)
+        public async Task<IActionResult> Delete(int id)
         {
             try
             {
-                var task = _userContext.Tasks.FirstOrDefault(t => t.Id == id);
-                if (task != null)
-                {
-                    _userContext.Tasks.Remove(task);
-                    _userContext.SaveChanges();
-                }
+                await _taskService.DeleteTaskAsync(id); // Use the task service to delete the task
+
                 return Ok();
             }
             catch (Exception ex)
@@ -112,8 +121,7 @@ namespace Task_Management.Controllers
             {
                 if (ModelState.IsValid)
                 {
-                    _userContext.Contacts.Add(contact);
-                    _userContext.SaveChanges();
+                    _taskService.SubmitContact(contact); // Use the task service to submit contact
                     TempData["Success"] = "Your message has been sent successfully!";
                 }
                 else
@@ -130,14 +138,41 @@ namespace Task_Management.Controllers
             return RedirectToAction("Index", "Home");
 }
 
+        //[HttpPost]
+        //public async Task<IActionResult> Search(string keyword)
+        //{
+        //    try
+        //    {
+        //        var tasks = await _taskService.GetTasksAsync();
+        //        var filtered = tasks
+        //            .Where(t => !string.IsNullOrEmpty(t.Title) && t.Title.ToLower().Contains(keyword.ToLower()))
+        //            .ToList();
 
-[ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+        //        return PartialView("_TaskListPartial", filtered); // ✅ Return only partial view
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        _logger.LogError(ex, "Search failed");
+        //        return StatusCode(500, "Error during search");
+        //    }
+        //}
+
+
+
+        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
     }
 }
+
+
+
+
+
+
+
 
 
 

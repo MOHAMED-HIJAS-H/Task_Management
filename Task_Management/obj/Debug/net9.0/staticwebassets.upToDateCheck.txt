@@ -34,6 +34,7 @@ C:\Users\Kaar User\source\repos\Task_Management\Task_Management\wwwroot\lib\boot
 C:\Users\Kaar User\source\repos\Task_Management\Task_Management\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.css.map
 C:\Users\Kaar User\source\repos\Task_Management\Task_Management\wwwroot\lib\jquery-validation\LICENSE.md
 C:\Users\Kaar User\source\repos\Task_Management\Task_Management\wwwroot\lib\jquery\LICENSE.txt
+C:\Users\Kaar User\source\repos\Task_Management\Task_Management\wwwroot\Images\Meteor.svg
 C:\Users\Kaar User\source\repos\Task_Management\Task_Management\wwwroot\lib\jquery\dist\jquery.min.map
 C:\Users\Kaar User\source\repos\Task_Management\Task_Management\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css
 C:\Users\Kaar User\source\repos\Task_Management\Task_Management\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.min.css
@@ -68,6 +69,7 @@ wwwroot\css\Task.css
 wwwroot\css\Team-collab.css
 wwwroot\favicon.ico
 wwwroot\Images\login.jpg
+wwwroot\Images\Meteor.svg
 wwwroot\js\site.js
 wwwroot\js\Team-collab.js
 wwwroot\lib\bootstrap\dist\css\bootstrap.css
