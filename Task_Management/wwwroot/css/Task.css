@@ -57,7 +57,7 @@ h3 {
 
 /* ---------- Input Styling ---------- */
 #taskInput,
-#taskSearch {
+#taskSearch, #taskDeadline {
     flex: 1;
     padding: 14px 18px;
     font-size: 16px;
@@ -71,7 +71,8 @@ h3 {
 }
 
     #taskInput:focus,
-    #taskSearch:focus {
+    #taskSearch:focus,
+    #taskDeadline{
         border-color: #8ab4f8;
         background-color: #fff;
         box-shadow: 0 0 6px rgba(138, 180, 248, 0.4);
@@ -124,6 +125,24 @@ h3 {
         width: 100%;
     }
 }
+
+/* Calendar Styles */
+.calendar-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #4dabf7;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+    .calendar-btn:hover {
+        background: #339af0;
+    }
+
 
 /*----------------------*/
 
@@ -374,7 +393,7 @@ button:hover {
     display: inline-block;
     margin-top: 20px;
     padding: 10px 20px;
-    background-color: #a2d2ff;
+    background-color: #4dabf7;
     color: #1f1f1f;
     border-radius: 6px;
     text-decoration: none;
@@ -383,8 +402,8 @@ button:hover {
 }
 
     .back-btn:hover {
-        background-color: #91c9ff;
-        transform: translateY(-2px);
+        background-color: #339af0;
+/*        transform: translateY(-2px);*/
     }
 
 /* Responsive Styles */
