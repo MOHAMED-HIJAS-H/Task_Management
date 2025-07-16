@@ -1,7 +1,4 @@
-﻿//// Retrieve tasks from local storage or initialize an empty array
-//let tasks = JSON.parse(localStorage.getItem('tasks')) || [];
-
-const taskManagerContainer = document.querySelector(".taskManager");
+﻿const taskManagerContainer = document.querySelector(".taskManager");
 const confirmEl = document.querySelector(".confirm");
 const confirmedBtn = confirmEl.querySelector(".confirmed");
 const cancelledBtn = confirmEl.querySelector(".cancel");
@@ -13,21 +10,27 @@ $(document).ready(function () {
     $('#taskForm').submit(function (event) {
         event.preventDefault();
         const taskInput = $('#taskInput').val().trim();
+        const taskDeadline = $('#taskDeadline').val();
 
-        if (taskInput !== '') {
-            //alert('User task is created');
+        if (taskInput !== '' && taskDeadline !== '') {
+
+            const taskData = {
+                title: taskInput,
+                deadline: taskDeadline
+            };
+
 
             $.ajax({
-                url: "/home/task", 
+                url: "/home/task",
                 type: "POST",
-                data: JSON.stringify(taskInput),
+                data: JSON.stringify(taskData),
                 contentType: "application/json",
                 success: function () {
                     window.location.reload();
                 },
                 error: function (xhr) {
                     console.error("Error:", xhr.responseText);
-                    alert("Error adding task: " + xhr.responseText);
+                    //alert("Error adding task: " + xhr.responseText);
                 }
             });
         }
@@ -49,8 +52,6 @@ $(document).ready(function () {
             }
         });
     });
-
-
 
     // Toggle task completion
     $('.toggleBtn').on('click', function () {

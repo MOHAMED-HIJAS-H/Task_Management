@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
+using System.Security.Claims;
 using Task_Management.Data;
 using Task_Management.DataAccess;
 using Task_Management.Domain.Interfaces;
@@ -37,33 +38,58 @@ namespace Task_Management.Controllers
         }
 
         [HttpGet]
-        public IActionResult Task()
+        public async Task<IActionResult> Task()
         {
-            var tasks = _userContext.Tasks.ToList(); // 🟢 Get from DB now
+            //var tasks = _userContext.Tasks.ToList(); // 🟢 Get from DB now
 
             // ✅ Get username from claims (if user is authenticated)
-            //#pragma warning disable CS8602 // Dereference of a possibly null reference.
+          
             var username = (User?.Identity != null && User.Identity.IsAuthenticated)
                 ? User.Claims.FirstOrDefault(c => c.Type == System.Security.Claims.ClaimTypes.Name)?.Value
                 : "Guest";
-            //#pragma warning restore CS8602 // Dereference of a possibly null reference.
+        
 
             ViewBag.Username = username; // Send username to view
+
+
+            var email = User?.Claims.FirstOrDefault(c => c.Type == ClaimTypes.Email)?.Value;
+
+            var tasks = await _taskService.GetTasksByUserEmailAsync(email); // ✅ Get only user's tasks
             return View(tasks);
         }
 
-        [HttpPost]
-        public async Task<IActionResult> Task([FromBody] string task)
+        public class TaskDto
         {
+            public string Title { get; set; }
+            public DateTime Deadline { get; set; }
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Task([FromBody] TaskDto task)
+        {
+            // Get deadline from query string (if sent via JS)
+            var deadlineStr = HttpContext.Request.Query["deadline"];
+            DateTime? deadline = null;
+
+            if (string.IsNullOrEmpty(task.Title) || task.Deadline == default)
+            {
+                return BadRequest("Invalid input.");
+            }
+
+            //Get user's email from session
+            var userEmail = HttpContext.Session.GetString("UserEmail");
+
             var newTask = new Task_Management.Models.Task
             {
-                Title = task,
-                IsCompleted = false
+                Title = task.Title,
+                IsCompleted = false,
+                 Deadline = task.Deadline,
+                UserEmail = userEmail
             };
 
             //_userContext.Tasks.Add(newTask);
             //_userContext.SaveChanges();
-            await _taskService.AddNewTaskAsync(newTask); // Use the task service to add the task
+            await _taskService.AddNewTaskAsync(newTask); //to save the task
 
             //var updatedTasks = _userContext.Tasks.ToList();
             var updatedTasks = await _taskService.GetTasksAsync(); // Get updated tasks from the service
@@ -156,6 +182,21 @@ namespace Task_Management.Controllers
         //        return StatusCode(500, "Error during search");
         //    }
         //}
+
+        public async Task<IActionResult> Calendar()
+        {
+            // Get current user email from claims
+            var userEmail = User?.Claims.FirstOrDefault(c => c.Type == ClaimTypes.Email)?.Value;
+
+            if (string.IsNullOrEmpty(userEmail))
+            {
+                return RedirectToAction("Index"); // fallback if not logged in
+            }
+
+            // Fetch only tasks for that user
+            var tasksWithDeadline = await _taskService.GetTasksByUserEmailAsync(userEmail);
+            return View(tasksWithDeadline);
+        }
 
 
 

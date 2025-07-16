@@ -6,14 +6,7 @@ using Task_Management.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// ✅ THIS is where you register services
 builder.Services.AddControllersWithViews();
-
-// ✅ ADD your DbContext registration here
-//builder.Services.AddDbContext<UserContext>(options =>
-//{
-//    options.UseSqlServer("Server=.;Database=Task;Trusted_Connection=True;TrustServerCertificate=True");
-//});
 
 builder.Services.AddDbContext<UserContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
@@ -28,22 +21,24 @@ builder.Services.AddAuthentication("CustomAuth")
 
 builder.Services.AddScoped<ITaskRepository, TaskRepository>();
 builder.Services.AddScoped<ITaskService, TaskService>();
+builder.Services.AddSession();
 
 
-
-// ✅ Register MemoryDataStore here
+// Register MemoryDataStore here
 builder.Services.AddSingleton<MemoryDataStore>();
 var app = builder.Build();
 
-// 👇 Middleware config
+//  Middleware config
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Home/Error");
 }
 app.UseStaticFiles();
 app.UseRouting();
-app.UseAuthorization();
+app.UseSession();
+
 app.UseAuthentication();
+app.UseAuthorization();
 
 // Default route
 //app.MapControllerRoute(
