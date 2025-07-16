@@ -57,7 +57,7 @@ namespace Task_Management.Service
 
         }
 
-        // ✅ NEW: Register user logic
+        // NEW: Register user logic
         public async Task<(bool Success, string Message)> RegisterUserAsync(User user)
         {
             var existingUser = await _taskRepo.GetUserByEmailAsync(user.Email);
@@ -74,21 +74,35 @@ namespace Task_Management.Service
         }
 
 
-public async Task<User?> AuthenticateUserAsync(string email, string plainPassword)
-    {
-        var user = await _taskRepo.GetUserByEmailAsync(email);
-
-        if (user != null)
+        public async Task<User?> AuthenticateUserAsync(string email, string plainPassword)
         {
-            string hashedPassword = PasswordHasher.Hash(plainPassword);
-            if (user.Password == hashedPassword)
+            var user = await _taskRepo.GetUserByEmailAsync(email);
+
+            if (user != null)
             {
-                return user;
+                string hashedPassword = PasswordHasher.Hash(plainPassword);
+                if (user.Password == hashedPassword)
+                {
+                    return user;
+                }
             }
+
+            return null; // Not authenticated
         }
 
-        return null; // Not authenticated
-    }
+        public async Task<List<Task_Management.Models.Task>> GetTasksForCalendarAsync()
+        {
+            var allTasks = await _taskRepo.GetAllTasksAsync();
+            return allTasks
+                .Where(t => t.Deadline != null)
+                .OrderBy(t => t.Deadline)
+                .ToList();
+        }
 
-}
+        public async Task<List<Models.Task>> GetTasksByUserEmailAsync(string email)
+        {
+            return await _taskRepo.GetTasksByUserEmailAsync(email);
+        }
+
+    }
 }

@@ -10,6 +10,9 @@ namespace Task_Management.Models
 
         public bool IsCompleted { get; set; } = false;
 
-        public string? UserEmail { get; set; } // optional: link to logged-in user
+        public DateTime? Deadline { get; set; }
+
+        public string? UserEmail { get; set; } 
+
     }
 }

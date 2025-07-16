@@ -1,15 +1,14 @@
 ﻿body {
-    font-family: Arial, sans-serif;
+    font-family: sans-serif;
     /*background: #bde0fe;*/
     background-image: url('/Images/Meteor.svg');
-    background-size: cover; /* Cover full screen */
-    background-position: center; /* Center the image */
-    background-repeat: no-repeat; /* Don't repeat */
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat; 
     background-attachment: fixed; /* Keeps image fixed during scroll */
-    min-height: 100vh; /* Ensures background fills full screen height */
-    margin: 0; /* Remove body margin */
+    min-height: 100vh; 
+    margin: 0; 
     padding: 0;
-    font-family: sans-serif;
 }
 
 header {
@@ -49,8 +48,8 @@ h3 {
 #taskForm,
 #searchForm {
     display: flex;
-    gap: 16px; /* 🟢 Gap between input and button */
-    margin-bottom: 20px; /* 🟢 Gap between forms */
+    gap: 16px; 
+    margin-bottom: 20px; 
     justify-content: center;
     flex-wrap: wrap;
 }
@@ -93,7 +92,7 @@ h3 {
     white-space: nowrap;
 }
 
-/* ✨ New Soft Button Colors */
+/*New Soft Button Colors */
 #addTaskBtn {
     background: #7cc6fe;
 }
@@ -110,21 +109,7 @@ h3 {
         background: #7fd88c;
     }
 
-/* ---------- Mobile Responsive ---------- */
-@media (max-width: 600px) {
-    #taskForm,
-    #searchForm {
-        flex-direction: column;
-        align-items: stretch;
-    }
 
-    #taskInput,
-    #taskSearch,
-    #addTaskBtn,
-    #searchBtn {
-        width: 100%;
-    }
-}
 
 /* Calendar Styles */
 .calendar-btn {
@@ -201,10 +186,6 @@ button:hover {
         border-left: 5px solid #4caf50; /* Subtle green highlight */
     }
 
-
-/*    .taskCard.pending {
-        background: linear-gradient(to bottom left, #E57488 40%, #FFB27A 100%);
-    }*/
     .taskCard.pending {
         background: linear-gradient(to bottom left, #fda085 30%, #f6d365 100%);
         padding: 10px;
@@ -275,15 +256,6 @@ button:hover {
     color: #e96075;
 }
 
-/*.button-box span {
-    font-size: 0.9em;
-    font-weight: 100;
-    letter-spacing: 3px;
-    padding-top: 5px;
-     color: #FCFCFC; 
-    padding-bottom: 5px;
-    text-transform: uppercase;
-}*/
 .button-box span {
     font-size: 0.9em;
     font-weight: 500; /* make it medium-bold */
@@ -394,7 +366,7 @@ button:hover {
     margin-top: 20px;
     padding: 10px 20px;
     background-color: #4dabf7;
-    color: #1f1f1f;
+    color: white;
     border-radius: 6px;
     text-decoration: none;
     font-weight: bold;
@@ -406,43 +378,6 @@ button:hover {
 /*        transform: translateY(-2px);*/
     }
 
-/* Responsive Styles */
-@media (max-width: 600px) {
-    .card {
-        width: 90%; /* Use most of the screen width */
-        padding: 2rem 1rem;
-    }
-
-    #taskForm {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    #taskInput {
-        margin-right: 0;
-        border-radius: 5px;
-        width: 100%;
-    }
-
-    button[type="submit"] {
-        width: 100%;
-        border-radius: 5px;
-        margin-left: 0;
-        padding: 15px 0;
-    }
-
-    #taskContainer {
-        flex-direction: column;
-        align-items: center;
-        margin: 10px 0;
-    }
-
-    .taskCard {
-        width: 90%;
-        margin: 10px 0;
-    }
-
-}
 /*// user color-profile in the top*/
 .top-right-profile {
     position: fixed;
@@ -475,5 +410,70 @@ button:hover {
         transform: translateY(0);
     }
 }
+
+/*------------------- RESPONSIVE FIXES -------------------*/
+@media (max-width: 768px) {
+    .card {
+        width: 95%;
+        padding: 2rem 1rem;
+    }
+
+    #taskForm,
+    #searchForm {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+    }
+
+    #taskInput,
+    #taskSearch,
+    #taskDeadline,
+    #addTaskBtn,
+    #searchBtn {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+        border-radius: 10px;
+        box-sizing: border-box;
+    }
+
+    button[type="submit"] {
+        width: 100%;
+        border-radius: 10px;
+        margin-left: 0;
+        padding: 15px 0;
+    }
+
+    #taskContainer {
+        flex-direction: column;
+        align-items: center;
+        margin: 10px 0;
+    }
+
+    .taskCard {
+        width: 95%;
+        margin: 10px 0;
+    }
+
+    .calendar-btn,
+    .back-btn {
+        width: 100%;
+        text-align: center;
+        margin: 10px 0;
+        box-sizing: border-box;
+    }
+
+    .top-right-profile {
+        right: 10px;
+        top: 10px;
+        font-size: 14px;
+        padding: 6px 12px;
+    }
+
+    .username {
+        padding: 4px 10px;
+    }
+}
+
 
 

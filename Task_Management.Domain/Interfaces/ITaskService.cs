@@ -18,5 +18,8 @@ namespace Task_Management.Domain.Interfaces
 
         Task<User?> AuthenticateUserAsync(string email, string plainPassword);
 
+        Task<List<Task_Management.Models.Task>> GetTasksForCalendarAsync();
+        Task<List<Task_Management.Models.Task>> GetTasksByUserEmailAsync(string email); 
+
     }
 }

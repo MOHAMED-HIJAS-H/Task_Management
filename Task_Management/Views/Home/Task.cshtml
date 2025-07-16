@@ -12,6 +12,13 @@
     <title>Task Manager</title>
     <link rel="stylesheet" href="~/css/Task.css">
     <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <!-- FullCalendar CSS -->
+    <link href='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.css' rel='stylesheet' />
+
+    <!-- FullCalendar JS (global version) -->
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.js'></script>
+
+
 </head>
 
 <body>
@@ -26,10 +33,11 @@
         <header class="card">
            
 
-            <h1>Task Manager ✅</h1>
+            <h1>Task Manager</h1>
 
             <form id="taskForm">
                 <input type="text" id="taskInput" placeholder="Add a task..." required>
+                <input type="date" id="taskDeadline" />
                 <button type="submit" id="addTaskBtn">Add Task</button>
             </form>
 
@@ -38,6 +46,7 @@
                 <button type="submit" id="searchBtn">Search</button>
             </form>
 
+            <a href="/Home/Calendar" class="calendar-btn">📅 View Calendar</a>
             <a href="/Home/Index" class="back-btn">Back to Home</a>
         </header>
 
@@ -69,6 +78,7 @@
                 <p style="text-align:center; font-size: 18px;">No tasks found.</p>
             }
         </section>
+    </section>
    
 
     <div class="confirm" style="display:;">
@@ -79,6 +89,8 @@
     </div>
 
     <script src="~/js/site.js"></script>
+  
+
 </body>
 </html>
 

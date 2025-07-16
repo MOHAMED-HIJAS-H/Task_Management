@@ -119,6 +119,9 @@ namespace Task_Management.Controllers
 
                 await HttpContext.SignInAsync(principal);
 
+                //Store email in session for later use (like saving tasks)
+                HttpContext.Session.SetString("UserEmail", user.Email);
+
                 TempData["Username"] = user.Username;
                 return RedirectToAction("Index", "Home");
             }
